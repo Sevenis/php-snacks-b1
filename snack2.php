@@ -40,13 +40,14 @@ Olimpia Milano - Cantù | 55-60 -->
      </head>
      <body>
          <ul>
-             <?php for($i = 0; $i < count($matches); $i++) { ?>
+             <?php foreach ($matches as $match) { ?>
                  <li>
-                     <h2>Match: <?php echo $matches[$i]['squadra1']?> VS <?php echo $matches[$i]['squadra2'];?> </h2>
-                     <p><?php echo $matches[$i]['risultato1']?> -- <?php echo $matches[$i]['risultato2'];?></p>
+                     <h2><?php echo $match['squadra1'];?> VS <?php echo $match['squadra2'];?></h2>
                  </li>
-            <?php } ?>
+                 <li>
+                     <h3><?php echo $match['risultato1'];?> -- <?php echo $match['risultato2'];?><h3>
+                 </li>
+             <?php } ?>
          </ul>
-
      </body>
  </html>
